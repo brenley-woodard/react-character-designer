@@ -1,9 +1,11 @@
 import React from 'react';
 
 export default function Home() {
+//   const [pajamas, setPajamas] = useState('');
   return (
     <>
-      <h1> Hello</h1>
+      <preview></preview>
+      <editor></editor>
     </>
   );
 }
