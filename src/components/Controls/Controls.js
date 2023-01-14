@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Controls({ pajamas, setPajamas, slippers, setSlippers, tea, setTea }) {
+export default function Controls({ pajamas, setPajamas, slippers, setSlippers, tea, setTea, book, setBook }) {
 
   const handlePajamaChange = (event) => {
     setPajamas(event.target.value);
@@ -11,8 +11,10 @@ export default function Controls({ pajamas, setPajamas, slippers, setSlippers, t
   const handleTeaChange = (event) => {
     setTea(event.target.value);
   };
-    // event.target.name === 'pajamas' && setPajamas(event.target.value);
-    // event.target.name === 'slippers' && setSlippers(event.target.value);
+  const handleBookChange = (event) => {
+    setBook(event.target.value);
+  };
+
   return (
     <div className='controls'>
       <select name="pajamas" value={pajamas} onChange={handlePajamaChange}>
@@ -30,6 +32,10 @@ export default function Controls({ pajamas, setPajamas, slippers, setSlippers, t
         <option value="chamomile">Chamomile</option>
         <option value="peppermint">Peppermint</option>
       </select>
+      <div>
+        <label>Add book here</label>
+        <textarea style={{ height: '50px' }} value={book} onChange={handleBookChange} />
+      </div>
     </div>
   );
 }
