@@ -6,7 +6,7 @@ export default function Home() {
   const [pajamas, setPajamas] = useState('black');
   const [slippers, setSlippers] = useState('checkered');
   const [tea, setTea] = useState('bedtime');
-  const [book, setBook] = useState('');
+  const [book, setBook] = useState([]);
 
   return (
     <div>

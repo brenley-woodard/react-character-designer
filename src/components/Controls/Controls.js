@@ -4,7 +4,7 @@ export default function Controls({ pajamas, setPajamas, slippers, setSlippers, t
   const [pajamaCount, setPajamaCount] = useState(0);
   const [slipperCount, setSlipperCount] = useState(0);
   const [teaCount, setTeaCount] = useState(0);
-  // const [bookValue, setBookValue] = useState([]);
+  const [bookValue, setBookValue] = useState('');
 
   const handlePajamaChange = (event) => {
     setPajamas(event.target.value);
@@ -26,10 +26,8 @@ export default function Controls({ pajamas, setPajamas, slippers, setSlippers, t
   };
   const handleBookChange = (event) => {
     setBook(event.target.value);
-    // setBookCount((currentState) => {
-    //   return currentState + 1;
-    // }
-    // );
+    // bookValue && setBook((currentState) => [...currentState, bookValue]);
+    // setBookValue('');
   };
 
   return (
@@ -51,10 +49,15 @@ export default function Controls({ pajamas, setPajamas, slippers, setSlippers, t
       </select>
       <div>
         <label>Add book here</label>
-        <input style={{ height: '30px' }} value={book} onChange={handleBookChange} />
+        <input style={{ height: '30px' }} value={bookValue} onChange={handleBookChange} />
+        {/* <ul>
+          {book.map((event) => {
+            return <li key={event}>{event}</li>;
+          })}
+        </ul> */}
       </div>
-      <p>You have changed your pajamas {pajamaCount} times, your slippers {slipperCount} times, 
-      your tea {teaCount} times, and your book choice {} times.</p>
+      <p>You have changed your pajamas {pajamaCount} times, your slippers {slipperCount} times, and
+      your tea {teaCount} times.</p>
     </div>
   );
 }

@@ -6,7 +6,6 @@ export default function Display({ pajamas, slippers, tea, book }) {
       <img src={`/images/${pajamas}.png`} />
       <img src={`/images/${slippers}.png`} />
       <img src={`/images/${tea}.png`} />
-      <p>{book}</p>
     </div>
   );
 }
