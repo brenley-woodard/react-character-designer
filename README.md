@@ -9,6 +9,6 @@
 1. Get pajama display image working ✅
 2. Get slippers display image working ✅
 3. Get tea display image working ✅
-5. Add bookChoice
+5. Add bookChoice ✅
 4. Add counts
 6. Make it cute / stretch goals 
