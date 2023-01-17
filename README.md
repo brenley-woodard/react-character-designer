@@ -1,5 +1,9 @@
 ![](./wireframe.png)
 
+*** ended up using a different file structure ***
+- no stats.js file
+- all of my count functionality lives within controls
+
 # Plan of attack 
 ### Beforehand...
 1. finish planning ✅
