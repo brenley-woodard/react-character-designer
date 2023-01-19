@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 
-export default function Controls({ pajamas, setPajamas, slippers, setSlippers, tea, setTea, book, setBook }) {
+export default function Controls({ pajamas, setPajamas, slippers, setSlippers, tea, setTea }) {
   const [pajamaCount, setPajamaCount] = useState(0);
   const [slipperCount, setSlipperCount] = useState(0);
   const [teaCount, setTeaCount] = useState(0);
-  const [bookValue, setBookValue] = useState('');
+  // const [bookValue, setBookValue] = useState('');
 
   const handlePajamaChange = (event) => {
     setPajamas(event.target.value);
@@ -24,11 +24,11 @@ export default function Controls({ pajamas, setPajamas, slippers, setSlippers, t
       return currentState + 1;
     });
   };
-  const handleBookChange = (event) => {
-    setBook(event.target.value);
-    // bookValue && setBook((currentState) => [...currentState, bookValue]);
-    // setBookValue('');
-  };
+  // const handleBookChange = (event) => {
+  //   setBook(event.target.value);
+  //   bookValue && setBook((currentState) => [...currentState, bookValue]);
+  //   setBookValue('');
+  // };
 
   return (
     <div className='controls'>
@@ -47,15 +47,15 @@ export default function Controls({ pajamas, setPajamas, slippers, setSlippers, t
         <option value="chamomile">Chamomile</option>
         <option value="peppermint">Peppermint</option>
       </select>
-      <div>
+      {/* <div>
         <label>Add book here</label>
         <input style={{ height: '30px' }} value={bookValue} onChange={handleBookChange} />
-        {/* <ul>
+        <ul>
           {book.map((event) => {
             return <li key={event}>{event}</li>;
           })}
-        </ul> */}
-      </div>
+        </ul>
+      </div> */}
       <p>You have changed your pajamas {pajamaCount} times, your slippers {slipperCount} times, and
       your tea {teaCount} times.</p>
     </div>

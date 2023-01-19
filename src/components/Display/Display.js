@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Display({ pajamas, slippers, tea, book }) {
+export default function Display({ pajamas, slippers, tea }) {
   return (
     <div>
       <img src={`/images/${pajamas}.png`} />
